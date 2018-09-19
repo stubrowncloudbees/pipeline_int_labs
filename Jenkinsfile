@@ -10,13 +10,13 @@ pipeline {
     }
     stage('Buzz Test') {
       parallel {
-        stage('Buzz Test') {
+        stage('Testing A') {
           steps {
             sh '''echo I am a $BUZZ_NAME
 '''
           }
         }
-        stage('Testing A') {
+        stage('Testing B') {
           steps {
             sh '''sleep 10
 echo done'''
