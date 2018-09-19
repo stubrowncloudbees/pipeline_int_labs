@@ -12,7 +12,7 @@ pipeline {
       parallel {
         stage('Testing A') {
           steps {
-            sh '''echo I am a $BUZZ_NAME
+            sh '''echo I  am a $BUZZ_NAME
 '''
           }
         }
