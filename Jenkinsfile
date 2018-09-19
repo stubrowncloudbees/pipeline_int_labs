@@ -7,7 +7,7 @@ pipeline {
         sh './jenkins/test-all.sh'
         archiveArtifacts(artifacts: 'jenkins/*.sh', fingerprint: true)
         sh '''echo I am a $BUZZ_NAME
-./jenkins/build.sh'''
+'''
       }
     }
   }
