@@ -9,9 +9,19 @@ pipeline {
       }
     }
     stage('Buzz Test') {
-      steps {
-        sh '''echo I am a $BUZZ_NAME
+      parallel {
+        stage('Buzz Test') {
+          steps {
+            sh '''echo I am a $BUZZ_NAME
 '''
+          }
+        }
+        stage('Testing A') {
+          steps {
+            sh '''sleep 10
+echo done'''
+          }
+        }
       }
     }
   }
